@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DriveText — TCPA-Compliant SMS Campaigns That Book Test Drives</title>
+<meta name="description" content="100% TCPA & A2P 10DLC compliant SMS outreach for US auto dealers. Turn cold leads into booked test drives. $0.30/SMS. First 100 SMS free.">
+<meta name="theme-color" content="#0B0D12">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="More Test Drives Booked — Without Lifting a Finger on Outreach">
+<meta property="og:description" content="TCPA-compliant SMS campaigns that turn cold leads into scheduled appointments. Try your first 100 SMS free.">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230B0D12'/><path d='M8 11h16v9a2 2 0 0 1-2 2h-7l-4 3v-3H10a2 2 0 0 1-2-2z' fill='%23FF4A1C'/></svg>">
+
+<style>
+:root{
+  --ink:#0B0D12;
+  --ink-2:#14171F;
+  --ink-3:#1C212B;
+  --paper:#FFFFFF;
+  --paper-2:#F6F7F9;
+  --line:#E3E6EB;
+  --line-dark:rgba(255,255,255,.10);
+  --text:#0B0D12;
+  --text-2:#545C6B;
+  --text-inv:#FFFFFF;
+  --text-inv-2:#A2AAB8;
+  --accent:#FF4A1C;
+  --accent-soft:#FFF0EB;
+  --green:#12855A;
+  --green-soft:#E8F6F0;
+  --radius:16px;
+  --radius-lg:24px;
+  --maxw:1180px;
+  --shadow:0 1px 2px rgba(11,13,18,.04), 0 8px 28px rgba(11,13,18,.06);
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{
+  margin:0;font-family:var(--font);color:var(--text);background:var(--paper);
+  font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,h4{margin:0;font-weight:680;letter-spacing:-.022em;line-height:1.1}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.section{padding:104px 0}
+@media (max-width:760px){.section{padding:72px 0}body{font-size:16px}}
+
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:18px;
+}
+.eyebrow::before{content:"";width:22px;height:1px;background:var(--accent);opacity:.55}
+.section-head{max-width:720px;margin-bottom:52px}
+.section-head h2{font-size:clamp(30px,4.2vw,46px)}
+.section-head p{margin-top:16px;color:var(--text-2);font-size:clamp(16px,2vw,19px)}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:16px 28px;border-radius:999px;border:1px solid transparent;
+  font-size:16px;font-weight:640;letter-spacing:-.01em;text-decoration:none;
+  cursor:pointer;transition:transform .18s ease,box-shadow .18s ease,background .18s ease,color .18s ease;
+  font-family:inherit;white-space:nowrap;
+}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 6px 20px rgba(255,74,28,.28)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(255,74,28,.36)}
+.btn-ghost{background:transparent;color:var(--text-inv);border-color:var(--line-dark)}
+.btn-ghost:hover{background:rgba(255,255,255,.06)}
+.btn-light{background:#fff;color:var(--ink)}
+.btn-light:hover{transform:translateY(-2px)}
+.btn-sm{padding:11px 20px;font-size:14.5px}
+.btn .arw{transition:transform .18s ease}
+.btn:hover .arw{transform:translateX(3px)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+
+/* ---------- nav ---------- */
+.nav{
+  position:sticky;top:0;z-index:60;background:rgba(11,13,18,.86);
+  backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);
+  border-bottom:1px solid var(--line-dark);
+}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:720;letter-spacing:-.03em;font-size:19px}
+.logo-mark{width:30px;height:30px;border-radius:9px;background:var(--accent);display:grid;place-items:center;flex:none}
+.logo-mark svg{width:17px;height:17px;display:block}
+.nav-links{display:flex;align-items:center;gap:30px}
+.nav-links a{color:var(--text-inv-2);text-decoration:none;font-size:15px;font-weight:520;transition:color .15s}
+.nav-links a:hover{color:#fff}
+@media (max-width:900px){.nav-links{display:none}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:var(--ink);color:var(--text-inv);overflow:hidden;padding:96px 0 0}
+.hero::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(760px 420px at 78% 6%, rgba(255,74,28,.20), transparent 62%),
+    radial-gradient(620px 400px at 8% 92%, rgba(46,91,255,.11), transparent 66%);
+}
+.hero::after{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background-image:linear-gradient(var(--line-dark) 1px,transparent 1px),linear-gradient(90deg,var(--line-dark) 1px,transparent 1px);
+  background-size:64px 64px;
+  -webkit-mask-image:radial-gradient(circle at 50% 30%,#000,transparent 72%);
+  mask-image:radial-gradient(circle at 50% 30%,#000,transparent 72%);
+}
+.hero-in{position:relative;z-index:2;display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:center}
+@media (max-width:980px){.hero{padding-top:64px}.hero-in{grid-template-columns:1fr;gap:44px}}
+
+.pill{
+  display:inline-flex;align-items:center;gap:9px;padding:7px 15px 7px 9px;border-radius:999px;
+  background:rgba(255,255,255,.06);border:1px solid var(--line-dark);
+  font-size:13.5px;font-weight:560;color:#D6DBE4;margin-bottom:26px;
+}
+.pill b{color:#fff;font-weight:660}
+.dot{width:7px;height:7px;border-radius:50%;background:#2BD07A;box-shadow:0 0 0 4px rgba(43,208,122,.16);flex:none}
+
+.hero h1{font-size:clamp(36px,5.4vw,62px);letter-spacing:-.033em;line-height:1.04}
+.hero h1 .hl{color:var(--accent)}
+.hero-sub{margin-top:22px;font-size:clamp(17px,2.1vw,20px);color:#B8C0CD;max-width:560px;line-height:1.55}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.hero-note{margin-top:18px;font-size:14px;color:#8D96A5}
+
+.badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:38px}
+.badge{
+  display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:10px;
+  background:rgba(255,255,255,.045);border:1px solid var(--line-dark);
+  font-size:13px;font-weight:580;color:#C9D0DA;
+}
+.badge svg{width:15px;height:15px;color:#2BD07A;flex:none}
+
+/* phone mock */
+.phone{
+  position:relative;margin:0 auto;width:100%;max-width:352px;
+  background:linear-gradient(180deg,#191D26,#11141B);
+  border:1px solid rgba(255,255,255,.13);border-radius:34px;padding:14px;
+  box-shadow:0 40px 90px rgba(0,0,0,.55);
+}
+.phone-top{display:flex;align-items:center;justify-content:space-between;padding:4px 8px 12px;font-size:11.5px;color:#7C8695;font-weight:600}
+.phone-screen{background:#0B0D12;border-radius:22px;padding:16px 14px 18px;border:1px solid rgba(255,255,255,.06)}
+.msg{max-width:86%;padding:11px 14px;border-radius:16px;font-size:14px;line-height:1.45;margin-bottom:10px;animation:pop .5s ease both}
+.msg.in{background:#232833;color:#E9ECF1;border-bottom-left-radius:5px}
+.msg.out{background:var(--accent);color:#fff;margin-left:auto;border-bottom-right-radius:5px}
+.msg-meta{font-size:11px;color:#6E7787;text-align:center;margin:6px 0 14px;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+.msg small{display:block;opacity:.72;font-size:11.5px;margin-top:5px}
+@keyframes pop{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.msg:nth-child(2){animation-delay:.15s}.msg:nth-child(3){animation-delay:.3s}
+.msg:nth-child(5){animation-delay:.45s}.msg:nth-child(6){animation-delay:.6s}
+.booked{
+  display:flex;align-items:center;gap:10px;margin-top:14px;padding:12px 14px;border-radius:14px;
+  background:rgba(43,208,122,.10);border:1px solid rgba(43,208,122,.26);color:#7DE9B4;font-size:13.5px;font-weight:640;
+}
+.booked svg{width:17px;height:17px;flex:none}
+
+/* stat strip */
+.strip{position:relative;z-index:2;margin-top:84px;border-top:1px solid var(--line-dark);background:rgba(255,255,255,.02)}
+.strip-in{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:30px 26px;border-right:1px solid var(--line-dark)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font-size:clamp(24px,3vw,32px);font-weight:700;letter-spacing:-.03em;color:#fff;line-height:1.1}
+.stat span{display:block;margin-top:6px;font-size:13.5px;color:#8D96A5;line-height:1.4}
+@media (max-width:860px){.strip-in{grid-template-columns:1fr 1fr}.stat:nth-child(2n){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line-dark)}.strip{margin-top:60px}}
+
+/* ---------- pain ---------- */
+.pain{background:var(--paper-2);border-bottom:1px solid var(--line)}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+@media (max-width:820px){.cards{grid-template-columns:1fr}}
+.card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:32px;
+  box-shadow:var(--shadow);transition:transform .2s ease,box-shadow .2s ease;
+}
+.card:hover{transform:translateY(-3px);box-shadow:0 2px 4px rgba(11,13,18,.05),0 18px 44px rgba(11,13,18,.10)}
+.card-ico{
+  width:46px;height:46px;border-radius:13px;background:var(--accent-soft);color:var(--accent);
+  display:grid;place-items:center;margin-bottom:20px;
+}
+.card-ico svg{width:23px;height:23px}
+.card h3{font-size:20px;margin-bottom:10px;letter-spacing:-.02em}
+.card p{color:var(--text-2);font-size:16px;line-height:1.6}
+
+/* ---------- steps ---------- */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+@media (max-width:1000px){.steps{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.steps{grid-template-columns:1fr}}
+.step{
+  position:relative;padding:30px 26px 32px;border:1px solid var(--line);border-radius:var(--radius-lg);
+  background:#fff;transition:border-color .2s ease,transform .2s ease;
+}
+.step:hover{border-color:#C9CFD8;transform:translateY(-3px)}
+.step-n{
+  display:inline-grid;place-items:center;width:38px;height:38px;border-radius:11px;
+  background:var(--ink);color:#fff;font-size:15px;font-weight:700;margin-bottom:18px;letter-spacing:-.02em;
+}
+.step h3{font-size:18px;margin-bottom:9px}
+.step p{color:var(--text-2);font-size:15.5px;line-height:1.58}
+.step-tag{
+  display:inline-block;margin-top:16px;padding:5px 11px;border-radius:7px;background:var(--paper-2);
+  border:1px solid var(--line);font-size:12.5px;font-weight:620;color:var(--text-2);
+}
+
+/* ---------- pricing ---------- */
+.pricing{background:var(--ink);color:var(--text-inv)}
+.pricing .section-head p{color:var(--text-inv-2)}
+.pricing .eyebrow{color:#FF7A54}
+.pricing .eyebrow::before{background:#FF7A54}
+.price-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:24px;align-items:start}
+@media (max-width:940px){.price-grid{grid-template-columns:1fr}}
+
+.table-wrap{border:1px solid var(--line-dark);border-radius:var(--radius-lg);background:rgba(255,255,255,.03);overflow:hidden}
+.ptable{width:100%;border-collapse:collapse;font-size:16.5px}
+.ptable th{
+  text-align:left;padding:18px 26px;font-size:12px;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:#8D96A5;border-bottom:1px solid var(--line-dark);background:rgba(255,255,255,.02);
+}
+.ptable th:last-child,.ptable td:last-child{text-align:right}
+.ptable td{padding:22px 26px;border-bottom:1px solid var(--line-dark);vertical-align:middle}
+.ptable tr:last-child td{border-bottom:0}
+.ptable .svc{font-weight:600;color:#fff;letter-spacing:-.01em}
+.ptable .svc small{display:block;color:#8D96A5;font-weight:450;font-size:13.5px;margin-top:5px;letter-spacing:0}
+.ptable .amt{font-size:24px;font-weight:700;color:#fff;letter-spacing:-.03em;white-space:nowrap}
+.ptable .amt span{font-size:14px;font-weight:500;color:#8D96A5;letter-spacing:0}
+.row-free{background:rgba(43,208,122,.07)}
+.row-free .amt{color:#5BE0A0}
+.tag-free{
+  display:inline-block;margin-left:10px;padding:3px 9px;border-radius:6px;background:rgba(43,208,122,.16);
+  color:#5BE0A0;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;vertical-align:middle;
+}
+.caption{margin-top:20px;color:#A2AAB8;font-size:15.5px;font-style:italic}
+@media (max-width:560px){
+  .ptable td,.ptable th{padding:16px 18px}
+  .ptable .amt{font-size:20px}
+  .ptable{font-size:15px}
+}
+
+/* estimator */
+.est{border:1px solid var(--line-dark);border-radius:var(--radius-lg);background:rgba(255,255,255,.03);padding:28px}
+.est h3{font-size:18px;margin-bottom:6px}
+.est>p{color:#8D96A5;font-size:14px;margin-bottom:24px}
+.field{margin-bottom:22px}
+.field label{display:flex;justify-content:space-between;align-items:baseline;font-size:14px;font-weight:600;color:#C9D0DA;margin-bottom:12px}
+.field label b{color:#fff;font-size:16px;font-variant-numeric:tabular-nums}
+input[type=range]{
+  -webkit-appearance:none;appearance:none;width:100%;height:5px;border-radius:99px;
+  background:rgba(255,255,255,.14);outline:none;cursor:pointer;
+}
+input[type=range]::-webkit-slider-thumb{
+  -webkit-appearance:none;appearance:none;width:20px;height:20px;border-radius:50%;
+  background:var(--accent);border:3px solid var(--ink);box-shadow:0 0 0 1px var(--accent);cursor:pointer;
+}
+input[type=range]::-moz-range-thumb{
+  width:20px;height:20px;border-radius:50%;background:var(--accent);
+  border:3px solid var(--ink);box-shadow:0 0 0 1px var(--accent);cursor:pointer;
+}
+.est-total{
+  display:flex;align-items:baseline;justify-content:space-between;gap:12px;
+  padding-top:22px;border-top:1px solid var(--line-dark);
+}
+.est-total span{font-size:14px;color:#8D96A5;font-weight:560}
+.est-total b{font-size:34px;font-weight:700;letter-spacing:-.035em;color:#fff;font-variant-numeric:tabular-nums}
+.est-foot{margin-top:12px;font-size:13px;color:#7C8695;line-height:1.5}
+
+/* ---------- why us ---------- */
+.why{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+@media (max-width:820px){.why-grid{grid-template-columns:1fr}}
+.why-item{display:flex;gap:18px;padding:26px;background:#fff;border:1px solid var(--line);border-radius:var(--radius)}
+.why-ico{width:42px;height:42px;flex:none;border-radius:12px;background:var(--green-soft);color:var(--green);display:grid;place-items:center}
+.why-ico svg{width:21px;height:21px}
+.why-item h3{font-size:17.5px;margin-bottom:7px}
+.why-item p{color:var(--text-2);font-size:15.5px;line-height:1.55}
+
+/* ---------- faq ---------- */
+.faq-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+@media (max-width:900px){.faq-grid{grid-template-columns:1fr;gap:36px}}
+.faq-aside h2{font-size:clamp(30px,4vw,44px)}
+.faq-aside p{margin-top:16px;color:var(--text-2);font-size:17px}
+.faq-aside .btn{margin-top:26px}
+.acc{border-top:1px solid var(--line)}
+.acc-item{border-bottom:1px solid var(--line)}
+.acc-q{
+  width:100%;display:flex;align-items:flex-start;justify-content:space-between;gap:20px;
+  padding:24px 0;background:none;border:0;cursor:pointer;text-align:left;
+  font-family:inherit;font-size:17.5px;font-weight:640;color:var(--text);letter-spacing:-.017em;line-height:1.4;
+}
+.acc-q:hover{color:var(--accent)}
+.acc-ico{
+  flex:none;width:26px;height:26px;border-radius:50%;border:1px solid var(--line);
+  display:grid;place-items:center;position:relative;margin-top:2px;transition:background .2s,border-color .2s,transform .25s;
+}
+.acc-ico::before,.acc-ico::after{content:"";position:absolute;background:var(--text-2);border-radius:2px;transition:transform .25s,background .2s}
+.acc-ico::before{width:11px;height:1.6px}
+.acc-ico::after{width:1.6px;height:11px}
+.acc-q[aria-expanded=true] .acc-ico{background:var(--accent);border-color:var(--accent);transform:rotate(90deg)}
+.acc-q[aria-expanded=true] .acc-ico::before,.acc-q[aria-expanded=true] .acc-ico::after{background:#fff}
+.acc-q[aria-expanded=true] .acc-ico::after{transform:scaleY(0)}
+.acc-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s ease}
+.acc-q[aria-expanded=true]+.acc-a{grid-template-rows:1fr}
+.acc-a>div{overflow:hidden}
+.acc-a p{color:var(--text-2);font-size:16px;line-height:1.65;padding-bottom:26px;max-width:64ch}
+.acc-a p+p{padding-top:0;margin-top:-12px}
+
+/* ---------- final cta ---------- */
+.final{background:var(--ink);color:var(--text-inv);position:relative;overflow:hidden}
+.final::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(720px 420px at 50% 0%,rgba(255,74,28,.20),transparent 66%);
+}
+.final-in{position:relative;z-index:2;display:grid;grid-template-columns:1fr .85fr;gap:56px;align-items:center}
+@media (max-width:940px){.final-in{grid-template-columns:1fr;gap:40px}}
+.final h2{font-size:clamp(30px,4.4vw,48px);line-height:1.08}
+.final h2 .hl{color:var(--accent)}
+.final p{margin-top:20px;color:#B8C0CD;font-size:18px;max-width:520px}
+.tick{margin-top:28px;display:grid;gap:11px}
+.tick li{display:flex;align-items:center;gap:11px;font-size:15.5px;color:#C9D0DA}
+.tick svg{width:18px;height:18px;color:#2BD07A;flex:none}
+
+.form{background:rgba(255,255,255,.045);border:1px solid var(--line-dark);border-radius:var(--radius-lg);padding:30px}
+.form h3{font-size:20px;margin-bottom:6px}
+.form>p{color:#8D96A5;font-size:14px;margin-bottom:22px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:520px){.form-row{grid-template-columns:1fr}}
+.inp{
+  width:100%;padding:14px 16px;margin-bottom:12px;border-radius:11px;
+  background:rgba(255,255,255,.05);border:1px solid var(--line-dark);
+  color:#fff;font-size:15.5px;font-family:inherit;transition:border-color .18s,background .18s;
+}
+.inp::placeholder{color:#7C8695}
+.inp:focus{outline:none;border-color:var(--accent);background:rgba(255,255,255,.08)}
+.form .btn{width:100%;margin-top:6px}
+.form-legal{margin-top:16px;font-size:12.5px;color:#7C8695;line-height:1.5}
+.form-ok{
+  display:none;text-align:center;padding:34px 16px;
+}
+.form-ok svg{width:46px;height:46px;color:#2BD07A;margin:0 auto 16px}
+.form-ok h3{font-size:21px;margin-bottom:8px}
+.form-ok p{color:#A2AAB8;font-size:15px}
+.is-sent .form-body{display:none}
+.is-sent .form-ok{display:block}
+
+/* ---------- footer ---------- */
+.foot{background:var(--ink);color:var(--text-inv-2);border-top:1px solid var(--line-dark);padding:52px 0 40px;font-size:14px}
+.foot-in{display:flex;flex-wrap:wrap;gap:28px;justify-content:space-between;align-items:flex-start}
+.foot-links{display:flex;flex-wrap:wrap;gap:24px}
+.foot a{color:var(--text-inv-2);text-decoration:none}
+.foot a:hover{color:#fff}
+.foot-legal{margin-top:34px;padding-top:26px;border-top:1px solid var(--line-dark);font-size:12.5px;color:#6E7787;line-height:1.65;max-width:900px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s cubic-bezier(.2,.7,.3,1),transform .6s cubic-bezier(.2,.7,.3,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}}
+.skip{position:absolute;left:-9999px;top:0;background:#fff;color:#000;padding:12px 18px;z-index:99}
+.skip:focus{left:12px;top:12px}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="#top">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M3 6h18v11a2 2 0 0 1-2 2h-7.2L7 22.5V19H5a2 2 0 0 1-2-2z" fill="#fff"/></svg>
+      </span>
+      DriveText
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#problem">Problem</a>
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#why">Why us</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-primary btn-sm" href="#start">Get 100 Free SMS <span class="arw">→</span></a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ 1. HERO ============ -->
+<section class="hero" id="top">
+  <div class="wrap hero-in">
+    <div>
+      <span class="pill"><span class="dot"></span> <b>TCPA</b> &amp; <b>A2P 10DLC</b> registered · US carriers</span>
+      <h1>More Test Drives Booked — <span class="hl">Without Lifting a Finger</span> on Outreach</h1>
+      <p class="hero-sub">100% TCPA-compliant SMS campaigns that turn cold leads into scheduled appointments. Try your first 100 SMS free.</p>
+
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#start">Get 100 Free SMS <span class="arw">→</span></a>
+        <a class="btn btn-ghost" href="#pricing">See pricing</a>
+      </div>
+      <p class="hero-note">No contract. No monthly retainer. You pay per message sent.</p>
+
+      <div class="badges">
+        <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> TCPA compliant</span>
+        <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> A2P 10DLC registered</span>
+        <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> DNC &amp; opt-out scrubbed</span>
+        <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Registered US numbers</span>
+      </div>
+    </div>
+
+    <div class="phone" aria-hidden="true">
+      <div class="phone-top"><span>9:41</span><span>Riverside Motors</span><span>●●●</span></div>
+      <div class="phone-screen">
+        <p class="msg-meta">Today · 10:12 AM</p>
+        <div class="msg out">Hi Marcus — Riverside Motors here. We have a '24 Tacoma TRD in stock at $2,400 under book. Want to drive it this week? Reply STOP to opt out.</div>
+        <div class="msg in">Wait seriously? What days do you have open</div>
+        <div class="msg out">Thursday 5:30 PM or Saturday 11 AM. Which works?<small>Delivered</small></div>
+        <p class="msg-meta">10:19 AM</p>
+        <div class="msg in">Saturday 11 works. Name is Marcus Bell.</div>
+        <div class="booked">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          Test drive booked · pushed to CRM
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="strip">
+    <div class="wrap strip-in">
+      <div class="stat"><b>$0.30</b><span>Per SMS sent — that's the whole price</span></div>
+      <div class="stat"><b>100</b><span>Free messages on your first campaign</span></div>
+      <div class="stat"><b>&lt;60 sec</b><span>Opt-out suppression, permanent</span></div>
+      <div class="stat"><b>$0</b><span>Retainer, setup fee, or minimum spend</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2. PAIN POINTS ============ -->
+<section class="section pain" id="problem">
+  <div class="wrap">
+    <div class="section-head rv">
+      <span class="eyebrow">The problem</span>
+      <h2>Your leads aren't cold. They're just waiting.</h2>
+      <p>Four things quietly cost dealerships more units per month than any ad budget ever bought.</p>
+    </div>
+
+    <div class="cards">
+      <article class="card rv">
+        <div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
+        <h3>Leads go cold</h3>
+        <p>Inquiries from your site or the marketplaces sit unanswered for 24–48 hours while the customer walks into the dealership down the road and buys there.</p>
+      </article>
+
+      <article class="card rv">
+        <div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 6.5c0-2-2.2-3.5-5-3.5S7 4.5 7 6.5s2 3 5 3.5 5 1.5 5 3.5-2.2 3.5-5 3.5-5-1.5-5-3.5"/></svg></div>
+        <h3>Expensive channels</h3>
+        <p>Google and Facebook Ads eat the budget while call conversion keeps dropping. You're paying more per lead every quarter for a phone that gets answered less.</p>
+      </article>
+
+      <article class="card rv">
+        <div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.6 1.8 18a2 2 0 0 0 1.7 3h16.9a2 2 0 0 0 1.7-3L13.7 3.6a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></div>
+        <h3>Compliance risk</h3>
+        <p>SMS outreach without A2P 10DLC registration and a documented TCPA process means real fines — so most dealers are simply afraid to run it in-house.</p>
+      </article>
+
+      <article class="card rv">
+        <div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></div>
+        <h3>Sales team is stretched thin</h3>
+        <p>Your reps are on live ups and inbound calls — not chasing a nine-month-old list. The follow-up that would actually pay never gets made.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. HOW IT WORKS ============ -->
+<section class="section" id="how">
+  <div class="wrap">
+    <div class="section-head rv">
+      <span class="eyebrow">How it works</span>
+      <h2>Four steps. You handle exactly one of them.</h2>
+      <p>We run the list, the compliance, the sending and the filtering. Your reps get a name and a time slot.</p>
+    </div>
+
+    <div class="steps">
+      <article class="step rv">
+        <span class="step-n">1</span>
+        <h3>Contact base</h3>
+        <p>Use your own CRM data — past customers, service records, unclosed leads — or we supply phone numbers matched to your target by city, state and profession.</p>
+        <span class="step-tag">Your data or ours</span>
+      </article>
+
+      <article class="step rv">
+        <span class="step-n">2</span>
+        <h3>Compliant outreach</h3>
+        <p>Messages go out from registered US numbers under an approved A2P 10DLC campaign, with sender identification and opt-out language on every send.</p>
+        <span class="step-tag">TCPA / A2P 10DLC</span>
+      </article>
+
+      <article class="step rv">
+        <span class="step-n">3</span>
+        <h3>Response filtering</h3>
+        <p>Replies are read, sorted and qualified. You see exactly how many turn into test-drive bookings — not vanity delivery stats.</p>
+        <span class="step-tag">Live tracking</span>
+      </article>
+
+      <article class="step rv">
+        <span class="step-n">4</span>
+        <h3>Handoff to sales</h3>
+        <p>Ready-to-close leads go straight to your reps with the full thread, the vehicle of interest and the requested time slot attached.</p>
+        <span class="step-tag">Straight to CRM</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. PRICING ============ -->
+<section class="section pricing" id="pricing">
+  <div class="wrap">
+    <div class="section-head rv">
+      <span class="eyebrow">Pricing</span>
+      <h2>Two line items. That's the entire price list.</h2>
+      <p>No packages, no tiers, no onboarding fee. Move the sliders and you have your quote.</p>
+    </div>
+
+    <div class="price-grid">
+      <div class="table-wrap rv">
+        <table class="ptable">
+          <caption class="sr-only" style="position:absolute;left:-9999px">Pricing for SMS outreach and targeted phone numbers</caption>
+          <thead>
+            <tr><th scope="col">Service</th><th scope="col">Price</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="svc">SMS outreach<small>Sent from registered US numbers, compliance included</small></td>
+              <td class="amt">$0.30 <span>/ SMS</span></td>
+            </tr>
+            <tr>
+              <td class="svc">Targeted phone number<small>Matched by city, state or profession</small></td>
+              <td class="amt">$0.15 <span>/ number</span></td>
+            </tr>
+            <tr class="row-free">
+              <td class="svc">First trial <span class="tag-free">Free</span><small>See your own conversion before you spend a dollar</small></td>
+              <td class="amt">100 <span>free SMS</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="est rv">
+        <h3>Estimate your campaign</h3>
+        <p>Drag to size it. Live total, no sales call needed.</p>
+
+        <div class="field">
+          <label for="sms">Messages to send <b id="smsOut">2,000</b></label>
+          <input type="range" id="sms" min="100" max="20000" step="100" value="2000">
+        </div>
+
+        <div class="field">
+          <label for="nums">Targeted numbers from us <b id="numsOut">2,000</b></label>
+          <input type="range" id="nums" min="0" max="20000" step="100" value="2000">
+        </div>
+
+        <div class="est-total">
+          <span>Estimated total</span>
+          <b id="total">$900</b>
+        </div>
+        <p class="est-foot">Set numbers to 0 if you're supplying your own CRM list. The first 100 SMS of your first campaign are free and already deducted.</p>
+      </div>
+    </div>
+
+    <p class="caption rv">“You only pay for what's actually sent. No hidden fees, no monthly retainer.”</p>
+  </div>
+</section>
+
+<!-- ============ 5. WHY US ============ -->
+<section class="section why" id="why">
+  <div class="wrap">
+    <div class="section-head rv">
+      <span class="eyebrow">Why us</span>
+      <h2>Built for the dealership sales cycle — not general marketing.</h2>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-item rv">
+        <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <div>
+          <h3>Fully legal, documented</h3>
+          <p>TCPA-aligned process and A2P 10DLC registered campaigns. Consent basis, DNC scrubs and opt-out logs are recorded per send and handed to you.</p>
+        </div>
+      </div>
+
+      <div class="why-item rv">
+        <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h13"/><path d="M3 12h9"/><path d="M3 18h13"/><path d="m18 9 3 3-3 3"/></svg></div>
+        <div>
+          <h3>Ready-made number lists</h3>
+          <p>Any target you name — city, state, profession. You don't source leads, buy data tools, or clean spreadsheets. It arrives filtered.</p>
+        </div>
+      </div>
+
+      <div class="why-item rv">
+        <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="m7 15 4-4 3 3 5-6"/></svg></div>
+        <div>
+          <h3>Real-time conversion tracking</h3>
+          <p>Delivered → replied → qualified → test drive booked. Every stage visible while the campaign runs, with the raw thread behind each number.</p>
+        </div>
+      </div>
+
+      <div class="why-item rv">
+        <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14l-1.4-5.2A3 3 0 0 0 14.7 9.5H9.3a3 3 0 0 0-2.9 2.3L5 17Z"/><circle cx="7.5" cy="17.5" r="1.8"/><circle cx="16.5" cy="17.5" r="1.8"/><path d="M5 17v2.5M19 17v2.5"/></svg></div>
+        <div>
+          <h3>Built for auto dealers</h3>
+          <p>Copy, timing and objection handling written around trade-ins, financing questions and weekend appointment slots — not generic e-commerce blasts.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. FAQ ============ -->
+<section class="section" id="faq">
+  <div class="wrap faq-grid">
+    <div class="faq-aside rv">
+      <span class="eyebrow">FAQ</span>
+      <h2>The questions every GM asks first.</h2>
+      <p>Mostly about legality and about what happens if it doesn't work. Both are fair.</p>
+      <a class="btn btn-primary" href="#start">Start with 100 free SMS <span class="arw">→</span></a>
+    </div>
+
+    <div class="acc rv">
+      <div class="acc-item">
+        <button class="acc-q" aria-expanded="false" aria-controls="a1">Where do the phone numbers come from, and is this legal?<span class="acc-ico" aria-hidden="true"></span></button>
+        <div class="acc-a" id="a1" role="region"><div>
+          <p>Two sources. Either your own CRM — past buyers, service customers and people who already contacted the store — or lists we supply from licensed US data providers, filtered by city, state and profession.</p>
+          <p>Before anything sends, the list is scrubbed against the National DNC Registry, carrier suppression and your own opt-out history. Traffic goes out on numbers registered under an approved A2P 10DLC campaign, and every message carries dealership identification plus opt-out instructions. We confirm the consent basis for each list with you in writing before the first send — that record is what keeps the campaign defensible under the TCPA and state mini-TCPA statutes.</p>
+        </div></div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-q" aria-expanded="false" aria-controls="a2">How is conversion calculated?<span class="acc-ico" aria-hidden="true"></span></button>
+        <div class="acc-a" id="a2" role="region"><div>
+          <p>Four stages, counted separately: delivered, replied, qualified (real buying intent), and test drive booked. Headline conversion is booked appointments divided by messages delivered.</p>
+          <p>Nothing is modeled or estimated — every number opens to the actual message thread behind it, so you can audit any figure in the report yourself.</p>
+        </div></div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-q" aria-expanded="false" aria-controls="a3">What if leads don't convert?<span class="acc-ico" aria-hidden="true"></span></button>
+        <div class="acc-a" id="a3" role="region"><div>
+          <p>You've spent only what was sent — there's no retainer to keep paying and no minimum commitment to unwind.</p>
+          <p>When a segment underperforms we rewrite the copy, change the send window and re-cut the target list at no additional fee. The 100 free messages exist precisely so you can measure your own market before committing budget.</p>
+        </div></div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-q" aria-expanded="false" aria-controls="a4">What happens with opt-outs?<span class="acc-ico" aria-hidden="true"></span></button>
+        <div class="acc-a" id="a4" role="region"><div>
+          <p>STOP, END, QUIT, UNSUBSCRIBE and the other standard keywords are honored automatically at the carrier level and in our system within seconds. The number moves to a permanent suppression list covering every future campaign for your dealership — it cannot be messaged again, by us or by a later list.</p>
+          <p>The full opt-out log ships with each campaign report so your compliance file stays complete.</p>
+        </div></div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-q" aria-expanded="false" aria-controls="a5">How soon do we see results?<span class="acc-ico" aria-hidden="true"></span></button>
+        <div class="acc-a" id="a5" role="region"><div>
+          <p>If your store isn't A2P 10DLC registered yet, carrier approval takes roughly 2–5 business days. That's the only real wait. List prep and copy take another day or two, then the first send goes out.</p>
+          <p>Replies typically start inside the first hour of a send, and the first booked test drives usually land within 48 hours of the campaign going live.</p>
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. FINAL CTA ============ -->
+<section class="section final" id="start">
+  <div class="wrap final-in">
+    <div class="rv">
+      <h2>Your first <span class="hl">100 SMS — free.</span><br>See your conversion before you pay for anything.</h2>
+      <p>Tell us your market and your inventory focus. We'll come back with a list size, projected reply volume and a send date.</p>
+      <ul class="tick">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> No contract, no monthly retainer</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Compliance handled end to end</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Cancel after the trial owing nothing</li>
+      </ul>
+    </div>
+
+    <div class="form rv" id="formCard">
+      <div class="form-body">
+        <h3>Claim your 100 free messages</h3>
+        <p>We reply within one business day.</p>
+        <form id="leadForm" novalidate>
+          <div class="form-row">
+            <input class="inp" type="text" name="name" placeholder="Full name" autocomplete="name" required>
+            <input class="inp" type="text" name="dealership" placeholder="Dealership" autocomplete="organization" required>
+          </div>
+          <input class="inp" type="email" name="email" placeholder="Work email" autocomplete="email" required>
+          <div class="form-row">
+            <input class="inp" type="tel" name="phone" placeholder="Phone" autocomplete="tel" required>
+            <input class="inp" type="text" name="market" placeholder="City / state" autocomplete="address-level2" required>
+          </div>
+          <button class="btn btn-primary" type="submit">Get 100 Free SMS <span class="arw">→</span></button>
+          <p class="form-legal">By submitting you agree to be contacted about this request. Message and data rates may apply. Reply STOP to opt out at any time.</p>
+        </form>
+      </div>
+
+      <div class="form-ok" role="status">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></svg>
+        <h3>Request received</h3>
+        <p>We'll be in touch within one business day with your list size and a send date.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-in">
+      <a class="logo" href="#top">
+        <span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M3 6h18v11a2 2 0 0 1-2 2h-7.2L7 22.5V19H5a2 2 0 0 1-2-2z" fill="#fff"/></svg></span>
+        DriveText
+      </a>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="#problem">Problem</a>
+        <a href="#how">How it works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="#start">Get started</a>
+      </nav>
+    </div>
+    <p class="foot-legal">
+      SMS outreach is operated under registered A2P 10DLC campaigns on US carrier networks. Consent basis for each contact list is confirmed with the dealership in writing before sending; lists are scrubbed against the National DNC Registry and opt-out requests are suppressed permanently. Nothing on this page is legal advice — dealerships remain responsible for their own consent records under the TCPA and applicable state statutes.
+      <br><br>© <span id="yr">2026</span> DriveText. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  document.getElementById("yr").textContent = new Date().getFullYear();
+
+  /* ---- FAQ accordion ---- */
+  document.querySelectorAll(".acc-q").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var open = btn.getAttribute("aria-expanded") === "true";
+      document.querySelectorAll(".acc-q").forEach(function(b){ b.setAttribute("aria-expanded","false"); });
+      btn.setAttribute("aria-expanded", open ? "false" : "true");
+    });
+  });
+
+  /* ---- pricing estimator ---- */
+  var SMS_RATE = 0.30, NUM_RATE = 0.15, FREE_SMS = 100;
+  var sms = document.getElementById("sms"),
+      nums = document.getElementById("nums"),
+      smsOut = document.getElementById("smsOut"),
+      numsOut = document.getElementById("numsOut"),
+      total = document.getElementById("total");
+
+  var nf = new Intl.NumberFormat("en-US");
+  var cf = new Intl.NumberFormat("en-US",{style:"currency",currency:"USD",maximumFractionDigits:0});
+
+  function calc(){
+    var s = +sms.value, n = +nums.value;
+    smsOut.textContent = nf.format(s);
+    numsOut.textContent = nf.format(n);
+    var billable = Math.max(0, s - FREE_SMS);
+    total.textContent = cf.format(billable * SMS_RATE + n * NUM_RATE);
+  }
+  sms.addEventListener("input", calc);
+  nums.addEventListener("input", calc);
+  calc();
+
+  /* ---- lead form ----
+     Static demo handler. To go live, POST to your CRM / form endpoint here
+     (e.g. fetch('https://formspree.io/f/XXXX', {method:'POST', body:new FormData(form)})). */
+  var form = document.getElementById("leadForm");
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    var ok = true;
+    form.querySelectorAll("[required]").forEach(function(i){
+      var valid = i.value.trim() !== "" && (i.type !== "email" || /\S+@\S+\.\S+/.test(i.value));
+      i.style.borderColor = valid ? "" : "#FF4A1C";
+      if(!valid) ok = false;
+    });
+    if(!ok) return;
+    document.getElementById("formCard").classList.add("is-sent");
+  });
+
+  /* ---- scroll reveal ---- */
+  var els = document.querySelectorAll(".rv");
+  if(!("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+    els.forEach(function(el){ el.classList.add("in"); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); }
+      });
+    }, {rootMargin:"0px 0px -8% 0px", threshold:.08});
+    els.forEach(function(el,i){ el.style.transitionDelay = (i % 4) * 60 + "ms"; io.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>
