@@ -8,6 +8,7 @@ service aimed at US auto dealerships.
 | File | Purpose |
 | --- | --- |
 | `index.html` | The entire page — HTML, CSS and JS inlined. No build step, no CDN calls. |
+| `vercel.json` | Static hosting config: clean URLs plus security and cache headers. |
 
 Open `index.html` in a browser and it works. Nothing to install.
 
@@ -54,13 +55,34 @@ Change those and the table markup together if rates ever move.
 
 ## Deploy
 
-Any static host. It's one file.
+Any static host — there is no build step and nothing to install.
+
+### Vercel (recommended)
+
+Import the repo at <https://vercel.com/new>. Settings that work:
+
+- **Framework Preset:** Other
+- **Build Command:** leave empty
+- **Output Directory:** leave empty (repo root)
+- **Install Command:** leave empty
+
+`vercel.json` handles clean URLs, security headers and cache policy. Every push to
+`main` then redeploys production automatically; pull requests get preview URLs.
+
+CLI alternative, if Node is installed:
+
+```bash
+npx vercel --prod
+```
+
+### Other hosts
+
+GitHub Pages: Settings → Pages → Source: `main` / root.
+Local preview:
 
 ```bash
 npx serve .
 ```
-
-GitHub Pages: push to `main`, then Settings → Pages → Source: `main` / root.
 
 ## Browser support
 
